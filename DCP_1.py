@@ -13,6 +13,7 @@
 ###
 ############################################
 
+
 def sum_k(list_of_integers, integer):
     # subract item in list less than given integer from integer 
     # locate difference in list of integers
@@ -24,4 +25,25 @@ def sum_k(list_of_integers, integer):
                 print item
                 return True
     return False
+    
+
+def sum_k_v2(list_of_integers, integer):
+    # subract item in list less than given integer from integer 
+    # locate difference in list of integers
+    
+    numbers = list_of_integers
+    for item in numbers:
+        difference = integer - item
+        if difference in numbers:
+            print difference
+            print item
+            return True
+        else:
+            numbers.remove(item)    #--- delete junk numbers to shorten list
+    return False
+
+
+
+
+
     
