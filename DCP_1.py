@@ -14,6 +14,7 @@
 ############################################
 
 
+from __future__ import print_function
 def sum_k(list_of_integers, integer):
     # subract item in list less than given integer from integer 
     # locate difference in list of integers
@@ -21,8 +22,8 @@ def sum_k(list_of_integers, integer):
         if item <= integer:
             difference = integer - item
             if difference in list_of_integers:
-                print difference
-                print item
+                print(difference)
+                print(item)
                 return True
     return False
     
@@ -35,8 +36,8 @@ def sum_k_v2(list_of_integers, integer):
     for item in numbers:
         difference = integer - item
         if difference in numbers:
-            print difference
-            print item
+            print(difference)
+            print(item)
             return True
         else:
             numbers.remove(item)    #--- delete junk numbers to shorten list
@@ -47,3 +48,4 @@ def sum_k_v2(list_of_integers, integer):
 
 
     
+
